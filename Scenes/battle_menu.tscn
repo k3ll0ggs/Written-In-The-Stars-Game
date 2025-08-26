@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://ilfoogbwr1f8"]
+
+[ext_resource type="Script" uid="uid://c7sf8ric863vl" path="res://Scripts/battle_menu.gd" id="1_73636"]
+
+[node name="BattleMenu" type="VBoxContainer"]
+offset_right = 178.0
+offset_bottom = 277.0
+script = ExtResource("1_73636")
+
+[node name="Attack" type="Button" parent="."]
+layout_mode = 2
+text = "Fight"
+
+[node name="Pass" type="Button" parent="."]
+layout_mode = 2
+text = "Skip"
+
+[connection signal="pressed" from="Attack" to="." method="_on_attack_pressed"]
+[connection signal="pressed" from="Pass" to="." method="_on_pass_pressed"]

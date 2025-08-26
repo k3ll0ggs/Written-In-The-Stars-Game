@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://d1lsudit8f8a6"]
+
+[ext_resource type="Script" uid="uid://cwystlp51uc0w" path="res://Scripts/game_manager.gd" id="1_qxrlw"]
+[ext_resource type="PackedScene" uid="uid://ilfoogbwr1f8" path="res://Scenes/battle_menu.tscn" id="3_wrm1d"]
+[ext_resource type="PackedScene" uid="uid://ck5d8mosuvy40" path="res://Scenes/what_happen.tscn" id="4_3dryh"]
+[ext_resource type="PackedScene" uid="uid://4crm2b8ufsb3" path="res://Scenes/turn_order.tscn" id="5_wowpa"]
+[ext_resource type="PackedScene" uid="uid://btsbipk54j58h" path="res://Scenes/party_info.tscn" id="6_i6g32"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_qxrlw")
+
+[node name="HeroStage" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BattleMenu" parent="." instance=ExtResource("3_wrm1d")]
+offset_left = 484.0
+offset_top = 346.0
+offset_right = 662.0
+offset_bottom = 623.0
+
+[node name="WhatHappen" parent="." instance=ExtResource("4_3dryh")]
+offset_left = 497.0
+offset_top = 2.0
+offset_right = 610.0
+offset_bottom = 25.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TurnOrder" parent="CanvasLayer" instance=ExtResource("5_wowpa")]
+offset_left = 239.0
+offset_top = 40.0
+offset_right = -269.0
+offset_bottom = 143.0
+
+[node name="PartyInfo" parent="." instance=ExtResource("6_i6g32")]
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer2"]
+offset_top = 527.0
+offset_right = 1152.0
+offset_bottom = 649.0
+
+[node name="UI Contatiner" type="HBoxContainer" parent="CanvasLayer2/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10

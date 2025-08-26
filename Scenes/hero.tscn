@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvx52fu6exm33"]
+
+[ext_resource type="Texture2D" uid="uid://clv04lpa8t52k" path="res://icon.svg" id="1_qhmnl"]
+[ext_resource type="Script" uid="uid://vyblyuxka5s7" path="res://Scripts/hero.gd" id="1_stlmo"]
+
+[node name="Hero" type="Node2D" groups=["Heroes"]]
+script = ExtResource("1_stlmo")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(50, 50)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_qhmnl")

@@ -1,0 +1,69 @@
+[gd_scene load_steps=3 format=3 uid="uid://b60rux10j760y"]
+
+[ext_resource type="Texture2D" uid="uid://clv04lpa8t52k" path="res://icon.svg" id="1_7kd32"]
+[ext_resource type="Script" uid="uid://ciu0xd5bjut2t" path="res://Scripts/character_ui.gd" id="1_bmewg"]
+
+[node name="Character UI" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -28.0
+offset_right = -1020.0
+offset_bottom = -605.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_7kd32")
+stretch_mode = 2
+script = ExtResource("1_bmewg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(19.1875, 20.892)
+scale = Vector2(0.24707, 0.257901)
+texture = ExtResource("1_7kd32")
+
+[node name="Buffs and Debuffs" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_top = 42.0
+offset_right = 126.0
+offset_bottom = 56.0
+
+[node name="PanelContainer" type="PanelContainer" parent="Buffs and Debuffs"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 3.0
+offset_right = 177.0
+offset_bottom = 17.0
+
+[node name="HP Label Container" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HP Label" type="Label" parent="MarginContainer/HP Label Container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "HP: "
+
+[node name="HP Current Label" type="Label" parent="MarginContainer/HP Label Container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "1200"
+
+[node name="HP Divide Label" type="Label" parent="MarginContainer/HP Label Container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = " / "
+
+[node name="HP Max Label" type="Label" parent="MarginContainer/HP Label Container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "1200"
+
+[node name="Health Bar" type="ProgressBar" parent="."]
+layout_mode = 2
+offset_left = 38.0
+offset_top = 20.0
+offset_right = 126.0
+offset_bottom = 36.0
+show_percentage = false
