@@ -1,0 +1,11 @@
+{
+	"Attack 1": {
+		"Name": "Placeholder Name",
+		"HP Cost": 1,
+		"SP Cost": 1,
+		"Opponents": 1,
+		"Times": 1,
+		"Description": "What the move does should be put here"
+	}
+}
+#this is currently unused

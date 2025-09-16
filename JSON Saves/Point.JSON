@@ -1,0 +1,28 @@
+{
+	"Health": 22.0,
+	"Current Health": 22.0,
+	"Mana": 13.0,
+	"Current Mana": 13.0,
+	"Attack": 10.0,
+	"Defence": 11.0,
+	"Magic": 13.0,
+	"Skills": {
+		"Attack 1": {
+			"Name": "Placeholder Name",
+			"HP Cost": 1,
+			"SP Cost": 1,
+			"Targets": 1,
+			"Times": 1,
+			"Description": "What the move does should be put here",
+		},
+		"Attack 2": {
+			"Name": "Placeholder Name 2",
+			"HP Cost": 0,
+			"SP Cost": 0,
+			"Targets": 0,
+			"Times": 1,
+			"Description": "What the move does should be put here"
+		}
+		
+	}
+}

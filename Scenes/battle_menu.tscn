@@ -9,11 +9,21 @@ script = ExtResource("1_73636")
 
 [node name="Attack" type="Button" parent="."]
 layout_mode = 2
-text = "Fight"
+text = "Attack"
 
-[node name="Pass" type="Button" parent="."]
+[node name="Skill" type="Button" parent="."]
 layout_mode = 2
-text = "Skip"
+text = "Skill"
+
+[node name="Limit Break" type="Button" parent="."]
+layout_mode = 2
+text = "Limit"
+
+[node name="Defend" type="Button" parent="."]
+layout_mode = 2
+text = "Defend"
 
 [connection signal="pressed" from="Attack" to="." method="_on_attack_pressed"]
-[connection signal="pressed" from="Pass" to="." method="_on_pass_pressed"]
+[connection signal="pressed" from="Skill" to="." method="_on_skill_pressed"]
+[connection signal="pressed" from="Limit Break" to="." method="_on_limit_break_pressed"]
+[connection signal="pressed" from="Defend" to="." method="_on_defend_pressed"]

@@ -1,9 +1,8 @@
 extends Node2D
 
 #@onready var hero = $Hero
-@onready var menu = $BattleMenu
+@onready var menu = $Menus/BattleMenu
 @onready var order = $CanvasLayer/TurnOrder
-@onready var party = $PartyInfo
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -32,7 +31,7 @@ var hero3UI = "0"
 
 func _lineUp():
 	#ask party_info to check whos in the party
-	var partyList = party.PartyOrder
+	var partyList = PartyInfo.PartyOrder
 	#the first three go to stage, everyone else should go to reserve
 	if partyList[0] != "0":
 		var inst = hero.instantiate()
@@ -82,7 +81,18 @@ func _turnProcess():
 
 	print("turn completed")
 	#Good turn!(hopefully) If the enemy isn't dead, then we gotta do it again
+		#something about using _endBattle() here
 	
 	#check party status
 	#redo turn
 	_turnProcess() #IDK how to do recursion without overflowing, so we have a wait statement at the top to stall
+
+
+func _endBattle(): #we need to leave combat at some point
+	var partyList = PartyInfo.PartyOrder #also, update the global stat sheets of the party
+	if partyList[0] != "0":
+		hero1ID._updateGlobal()
+	if partyList[1] != "0":
+		hero2ID._updateGlobal()
+	if partyList[2] != "0":
+		hero3ID._updateGlobal()

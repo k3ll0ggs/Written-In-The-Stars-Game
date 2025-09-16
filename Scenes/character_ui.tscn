@@ -7,35 +7,36 @@
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -28.0
-offset_right = -1020.0
-offset_bottom = -605.0
+offset_left = -36.0
+offset_top = -56.0
+offset_right = -1014.0
+offset_bottom = -576.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_7kd32")
-stretch_mode = 2
 script = ExtResource("1_bmewg")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(19.1875, 20.892)
-scale = Vector2(0.24707, 0.257901)
+[node name="Character Portrait" type="Sprite2D" parent="."]
+position = Vector2(41.5, 52.0562)
+scale = Vector2(0.554687, 0.579004)
 texture = ExtResource("1_7kd32")
 
 [node name="Buffs and Debuffs" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_top = 42.0
-offset_right = 126.0
-offset_bottom = 56.0
+offset_left = 7.5
+offset_top = 91.5562
+offset_right = 167.5
+offset_bottom = 112.556
 
 [node name="PanelContainer" type="PanelContainer" parent="Buffs and Debuffs"]
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 38.0
-offset_top = 3.0
-offset_right = 177.0
-offset_bottom = 17.0
+offset_left = 80.0
+offset_top = 17.0
+offset_right = 174.0
+offset_bottom = 31.0
 
 [node name="HP Label Container" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -60,10 +61,50 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 10
 text = "1200"
 
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 52.0
+offset_right = 174.0
+offset_bottom = 67.0
+
+[node name="SP Label Container" type="HBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+
+[node name="SP Label" type="Label" parent="MarginContainer2/SP Label Container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "HP: "
+
+[node name="SP Current Label" type="Label" parent="MarginContainer2/SP Label Container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "1200"
+
+[node name="SP Divide Label" type="Label" parent="MarginContainer2/SP Label Container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = " / "
+
+[node name="SP Max Label" type="Label" parent="MarginContainer2/SP Label Container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "1200"
+
 [node name="Health Bar" type="ProgressBar" parent="."]
 layout_mode = 2
-offset_left = 38.0
-offset_top = 20.0
-offset_right = 126.0
-offset_bottom = 36.0
+offset_left = 79.5
+offset_top = 33.5562
+offset_right = 167.5
+offset_bottom = 49.5562
+rounded = true
+show_percentage = false
+
+[node name="Mana Bar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 79.5
+offset_top = 70.0562
+offset_right = 167.5
+offset_bottom = 86.0562
+rounded = true
 show_percentage = false
