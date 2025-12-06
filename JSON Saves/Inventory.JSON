@@ -1,0 +1,53 @@
+{
+	"Inventory": {
+		"item A": {
+			"Name": "Placeholder Name A",
+			"Count": 1,
+			"Stack": 99,
+			"Description": "The description for item A",
+			"Lore": "Put some sweet flavor text here",
+			"Supportive": "n",
+		},
+		"item B": {
+			"Name": "Placeholder Name B",
+			"Count": 2,
+			"Stack": 99,
+			"Description": "The description for item B",
+			"Lore": "Put some sweet flavor text here",
+			"Supportive": "y",
+		},
+		
+	},
+	"Armors": {
+		"armor A":{
+			"Name": "Placeholder Armor",
+			"Count": 3,
+			"Stack": 99,
+			"Stats": {
+				"add health": 0,
+				"add mana": 0,
+				"add attack": 0,
+				"add defence": 1,
+				"add magic": 0,
+			},
+			"Description": "The description for armor A",
+			"Lore": "Put some sweet flavor text here",
+		},
+	},
+	"Weapons": {
+		"weapon A":{
+			"Name": "Placeholder Weapon",
+			"Count": 3,
+			"Stack": 99,
+			"Stats": {
+				"add health": 0,
+				"add mana": 1,
+				"add attack": 1,
+				"add defence": 0,
+				"add magic": 0,
+			},
+			"Description": "The description for weapon A",
+			"Lore": "Put some sweet flavor text here",
+		},
+	},
+}

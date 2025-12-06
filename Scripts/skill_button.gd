@@ -1,5 +1,6 @@
 extends Button
 
+@onready var game = $"../../.."
 @onready var textBox = $"../../../FlavorText"
 @onready var HPCost = $"../../../FlavorText/Line1"
 @onready var SPCost = $"../../../FlavorText/Line2"
@@ -34,3 +35,9 @@ func _on_mouse_exited():
 	HPCost.text = ""
 	SPCost.text = ""
 	description.text = ""
+
+
+func _on_pressed():
+	print("this")
+	game._changeState(game.state.targeting)
+	game._targeting(save, self)

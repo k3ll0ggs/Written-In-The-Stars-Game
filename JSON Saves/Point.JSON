@@ -12,7 +12,7 @@
 			"HP Cost": 1,
 			"SP Cost": 1,
 			"Targets": 1,
-			"Times": 1,
+			"Supportive": "n",
 			"Description": "What the move does should be put here",
 		},
 		"Attack 2": {
@@ -20,9 +20,24 @@
 			"HP Cost": 0,
 			"SP Cost": 0,
 			"Targets": 0,
-			"Times": 1,
-			"Description": "What the move does should be put here"
+			"Supportive": "y",
+			"Description": "What the move does should be put here",
+		},
+		"Attack 3": {
+			"Name": "Placeholder Name 3",
+			"HP Cost": 0,
+			"SP Cost": 0,
+			"Targets": 0,
+			"Supportive": "ya",
+			"Description": "This is a placeholder for a move that hits everyone on the ally team",
+		},
+		"Attack 4": {
+			"Name": "Placeholder Name 4",
+			"HP Cost": 0,
+			"SP Cost": 0,
+			"Targets": 0,
+			"Supportive": "na",
+			"Description": "This is a placeholder for a move that hits everyone on the enemy team"
 		}
-		
 	}
 }

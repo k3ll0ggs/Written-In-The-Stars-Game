@@ -74,7 +74,7 @@ layout_mode = 2
 [node name="SP Label" type="Label" parent="MarginContainer2/SP Label Container"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 10
-text = "HP: "
+text = "SP: "
 
 [node name="SP Current Label" type="Label" parent="MarginContainer2/SP Label Container"]
 layout_mode = 2
