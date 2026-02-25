@@ -1,0 +1,125 @@
+[gd_scene load_steps=5 format=3 uid="uid://0dsb2ecyy5lk"]
+
+[ext_resource type="PackedScene" uid="uid://bx8y6j16ffnlc" path="res://Battle Systems/Scenes/Hero Stage.tscn" id="1_fbwin"]
+[ext_resource type="Script" uid="uid://ib5guetjs6yx" path="res://Battle Systems/Scripts/GameManager.gd" id="1_t84p8"]
+[ext_resource type="PackedScene" uid="uid://4pmpw14vjbb4" path="res://Battle Systems/Scenes/turn_order.tscn" id="3_5ijrp"]
+[ext_resource type="PackedScene" uid="uid://dxmamoedlyd4h" path="res://Battle Systems/Scenes/action_menu.tscn" id="4_bw7sy"]
+
+[node name="Battle Tree" type="Node2D"]
+script = ExtResource("1_t84p8")
+
+[node name="Enemy Stage" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Hero Stage" parent="." instance=ExtResource("1_fbwin")]
+offset_left = 38.0
+offset_top = 63.0
+offset_right = 38.0
+offset_bottom = 63.0
+
+[node name="Top UI" type="CanvasLayer" parent="."]
+
+[node name="TurnOrder" parent="Top UI" instance=ExtResource("3_5ijrp")]
+mouse_filter = 1
+
+[node name="Bottom UI" type="CanvasLayer" parent="."]
+
+[node name="UI Healthbars" type="Control" parent="Bottom UI"]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="Panel" type="Panel" parent="Bottom UI/UI Healthbars"]
+layout_mode = 0
+offset_top = -62.0
+offset_right = 591.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="UI Container" type="HBoxContainer" parent="Bottom UI/UI Healthbars/Panel"]
+layout_mode = 0
+offset_right = 593.0
+offset_bottom = 101.0
+
+[node name="Text UI" type="Control" parent="Bottom UI"]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="Panel" type="Panel" parent="Bottom UI/Text UI"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -561.0
+offset_top = -102.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Bottom UI/Text UI/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Bottom UI/Text UI/Panel"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -557.0
+offset_top = -102.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Bottom UI/Text UI/Panel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Action Menu" parent="CanvasLayer" instance=ExtResource("4_bw7sy")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+mouse_filter = 2
+
+[connection signal="checkStatus" from="." to="." method="_on_check_status"]
+[connection signal="endBattle" from="." to="." method="_on_end_battle"]
+[connection signal="makeText" from="." to="." method="_on_make_text"]
+[connection signal="nextTurn" from="." to="." method="_on_next_turn"]
+[connection signal="startBattle" from="." to="." method="_on_start_battle"]

@@ -1,0 +1,103 @@
+[gd_scene load_steps=3 format=3 uid="uid://b60rux10j760y"]
+
+[ext_resource type="Texture2D" uid="uid://bcaoorxbe5den" path="res://icon.svg" id="1_7kd32"]
+[ext_resource type="Script" uid="uid://cvceoawdrsnw4" path="res://Battle Systems/Scripts/character_ui.gd" id="1_bmewg"]
+
+[node name="Character UI" type="Panel"]
+custom_minimum_size = Vector2(180, 0)
+offset_right = 181.0
+offset_bottom = 128.0
+script = ExtResource("1_bmewg")
+
+[node name="Character Portrait" type="Sprite2D" parent="."]
+position = Vector2(41.5, 52.0562)
+scale = Vector2(0.554687, 0.579004)
+texture = ExtResource("1_7kd32")
+
+[node name="Buffs and Debuffs" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 7.5
+offset_top = 91.5562
+offset_right = 167.5
+offset_bottom = 112.556
+
+[node name="PanelContainer" type="PanelContainer" parent="Buffs and Debuffs"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 17.0
+offset_right = 174.0
+offset_bottom = 31.0
+
+[node name="HP Label Container" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HP Label" type="Label" parent="MarginContainer/HP Label Container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "HP: "
+
+[node name="HP Current Label" type="Label" parent="MarginContainer/HP Label Container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "1200"
+
+[node name="HP Divide Label" type="Label" parent="MarginContainer/HP Label Container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = " / "
+
+[node name="HP Max Label" type="Label" parent="MarginContainer/HP Label Container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "1200"
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 52.0
+offset_right = 174.0
+offset_bottom = 67.0
+
+[node name="SP Label Container" type="HBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+
+[node name="SP Label" type="Label" parent="MarginContainer2/SP Label Container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "SP: "
+
+[node name="SP Current Label" type="Label" parent="MarginContainer2/SP Label Container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "1200"
+
+[node name="SP Divide Label" type="Label" parent="MarginContainer2/SP Label Container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = " / "
+
+[node name="SP Max Label" type="Label" parent="MarginContainer2/SP Label Container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "1200"
+
+[node name="Health Bar" type="ProgressBar" parent="."]
+layout_mode = 2
+offset_left = 79.5
+offset_top = 33.5562
+offset_right = 167.5
+offset_bottom = 49.5562
+rounded = true
+show_percentage = false
+
+[node name="Mana Bar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 79.5
+offset_top = 70.0562
+offset_right = 167.5
+offset_bottom = 86.0562
+rounded = true
+show_percentage = false

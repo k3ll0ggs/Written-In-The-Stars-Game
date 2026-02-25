@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://4pmpw14vjbb4"]
+
+[ext_resource type="Script" uid="uid://c0vkq2o31idav" path="res://Battle Systems/Scripts/TurnOrderContainer.gd" id="1_4wxir"]
+
+[node name="TurnOrder" type="Control"]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+grow_horizontal = 2
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -450.0
+offset_right = 450.0
+offset_bottom = 90.0
+grow_horizontal = 2
+
+[node name="TurnIconContainer" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -450.0
+offset_right = 450.0
+offset_bottom = 90.0
+grow_horizontal = 2
+script = ExtResource("1_4wxir")

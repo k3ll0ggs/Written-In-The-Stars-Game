@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://ck5d8mosuvy40"]
-
-[node name="WhatHappen" type="Label"]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "What Happen?"
